@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+
+<html>
+<body>
+    <input type="radio" id="r1" name="W" checked="true" onclick="changeImg()">W/L 300/1000 <br>
+    <input type="radio" id="r2" name="W" onclick="changeImg()">W/L  600/1000 <br>
+    <input type="radio" id="r3" name="W" onclick="changeImg()">W/L  1200/1000 <br>
+
+    <div style="position: relative;">
+        <img id="img1" src="meow.jpeg"
+             width="720" height="490"
+             style="position: absolute;  left: 0px; top:0px; z-index: 1;" />
+        <svg width="600" height="600"
+             style="position: absolute;  left: 0px; top:500px; z-index: 2;">
+            <rect width="100" height="50" style="fill: rgb(0,0,255); stroke-width: 3; stroke: rgb(0,0,0) ;position: relative; left: 0px; top: 100px;"  />
+            <ellipse cx="300" cy="80" rx="100" ry="50"
+                     style="fill:yellow;stroke:purple;stroke-width:2 " />
+            <circle cx="260" cy="200" r="60" stroke="blue" stroke-width="7" fill="none" />
+            <text x="0" y="15" fill="red" font-size="20">cat is cute!</text>
+            <line x1="100" y1="300" x2="500" y2="300" style="stroke:rgb(255,0,0);stroke-width:2" />
+        </svg>
+
+    </div>
+</body>
+<script type="text/javascript">
+
+    function changeImg() {
+    //  jpgDir/300-1000.PNG"
+
+      //  alert("aaa");
+        if (document.getElementById("r1").checked == true) {
+            document.getElementById("img1").src = "meow.jpeg"
+            }
+
+        if (document.getElementById("r2").checked == true) {
+            document.getElementById("img1").src = "meow3.jpg"
+            }
+
+        if (document.getElementById("r3").checked == true) {
+            document.getElementById("img1").src = "mewo2.jpg"
+            }
+
+        }
+
+</script>
+
+</html>
